@@ -1,4 +1,6 @@
 #!/bin/sh
+
+Cài UBUNTU 22.04.5_Server
 sudo -s
 cd
 
