@@ -12,7 +12,7 @@ systemctl status mysql.service
 
 mysql -uroot -p 
 create database zabbix character set utf8mb4 collate utf8mb4_bin;
-create user zabbix@localhost identified by 'WM@zabbixAdmin';
+create user zabbix@localhost identified by 'SRI@zabbixAdmin';
 grant all privileges on zabbix.* to zabbix@localhost;
 set global log_bin_trust_function_creators = 1;
 quit;
