@@ -14,7 +14,7 @@ systemctl status mysql.service
 
 mysql -uroot -p 
 create database zabbix character set utf8mb4 collate utf8mb4_bin;
-create user zabbix@localhost identified by 'WM@zabbixAdmin';
+create user zabbix@localhost identified by 'SRI@zabbixAdmin';
 grant all privileges on zabbix.* to zabbix@localhost;
 set global log_bin_trust_function_creators = 1;
 quit;
@@ -22,7 +22,7 @@ quit;
 zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -p zabbix
 
 
-sed -i "s/# DBPassword=/DBPassword=WM@zabbixAdmin/g" /etc/zabbix/zabbix_server.conf
+sed -i "s/# DBPassword=/DBPassword=SRI@zabbixAdmin/g" /etc/zabbix/zabbix_server.conf
 
 systemctl restart zabbix-server zabbix-agent apache2
 systemctl enable zabbix-server zabbix-agent apache2
